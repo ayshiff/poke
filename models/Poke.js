@@ -1,13 +1,13 @@
-var mongooser = require ('mongoose');
+var mongoose = require ('mongoose');
 
-var pokemonSchema = new mongooser.Schema({
+var pokemonSchema = new mongoose.Schema({
     name: String,
     number: Number,
-    secription: String,
+    description: String,
     picture: String,
     types: [
         {
-            type: mongoose.Types.ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref: 'Type'
         }
     ]
