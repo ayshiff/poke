@@ -10,4 +10,13 @@ router.get('/', function(req, res){
     });
 });
 
+router.get('/:id', function(req,res){
+    Poke.findById(req.params.id).populate('types').then(function(pokemon){
+        res.render('pokes/show.html', {pokemon: pokemon} )
+    },
+    function(err){
+        res.status(500).send(err)
+    });
+})
+
 module.exports = router;
