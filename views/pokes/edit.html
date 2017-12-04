@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+
+
+{% block content %}
+<form action="POST">
+    <div class="form-group">
+        <label for="name">Nom du pokemon</label>
+        <input type="text" name="name" id="name" class="form-control" value="{{pokemon.name}}">
+    </div>
+    <div class="form-group">
+        <label for="number">Numéro</label>
+        <input type="number" name="number" id="number" class="form-control" value="{{pokemon.number}}">
+    </div>
+    <div class="form-group">
+        <label for="name">Description</label>
+        <textarea name="description" id="description" class="form-control">{{pokemon.description}}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="file">Image</label>
+        <input type="file" name="file" id="file">
+    </div>
+    <div class="form-group">
+        {% for type in types %}
+        <label>
+            <input type="checkbox" name="types[]" value="{{type.name}}" {% if pokemon.types.indexOf(type._id) != -1 %}checked{% endif %} >
+            {{type.name}}
+        </label>
+        {% endfor %}
+    </div>
+    <input type="submit" class="btn btn-primary" value="Enregistrer">
+</form>
+
+{% endblock %}
+
