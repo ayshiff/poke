@@ -3,7 +3,7 @@
 
 
 {% block content %}
-<form action="POST" action="{{endpoint}}">
+<form action="POST" action="{{endpoint}}" enctype="multipart/form-data">
     <div class="form-group">
         <label for="name">Nom du pokemon</label>
         <input type="text" name="name" id="name" class="form-control" value="{{pokemon.name}}">

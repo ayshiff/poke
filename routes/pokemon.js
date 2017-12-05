@@ -24,7 +24,7 @@ router.get('/edit/:id', function(req, res){
     Type.find({}).then(types => {
         // Populate nous permet de tranformer un tableau d'object id en tableau avec les types que l'on veut récupérer
        Poke.findById(req.params.id).then(pokemon => {
-        res.render('pokes/edit.html', {pokemon: pokemon, types: types, endpoint: '/' + pokemon.id.toString()} )
+        res.render('pokes/edit.html', {pokemon: pokemon, types: types, endpoint: '/' + pokemon._id.toString()} )
     }) 
     })  
 });
@@ -52,13 +52,14 @@ router.post('/:id?', (req, res) => {
         pokemon.number = req.body.number;
         pokemon.types = req.body.types;
 
-        if(req.file) pokemon.picture = request.file.filename;
+        if(req.file) pokemon.picture = req.file.filename;
 
         return pokemon.save();    
     }).then(() => {
         res.redirect('/');
-    }, err => console.log(err))
+    }, err => console.log(err));
 });
 
 
 module.exports = router;
+
