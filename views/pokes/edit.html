@@ -3,7 +3,7 @@
 
 
 {% block content %}
-<form action="POST">
+<form action="POST" action="{{endpoint}}">
     <div class="form-group">
         <label for="name">Nom du pokemon</label>
         <input type="text" name="name" id="name" class="form-control" value="{{pokemon.name}}">
@@ -23,7 +23,7 @@
     <div class="form-group">
         {% for type in types %}
         <label>
-            <input type="checkbox" name="types[]" value="{{type.name}}" {% if pokemon.types.indexOf(type._id) != -1 %}checked{% endif %} >
+            <input type="checkbox" name="types[]" value="{{type._id}}" {% if pokemon.types.indexOf(type._id) != -1 %}checked{% endif %} >
             {{type.name}}
         </label>
         {% endfor %}
