@@ -9,7 +9,7 @@ Make sure your server databse is running and connect in the app.js file :
   mongoose.connect('mongodb://localhost/'yourdatabase'');
 
 
-git clone git@github.com:ayshiff/poke.git # or clone your own fork
+git clone https://github.com/ayshiff/poke.git # or clone your own fork
 cd poke
 npm install
 npm start
