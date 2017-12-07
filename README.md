@@ -1,7 +1,7 @@
 This is a simple app about NodeJS and pokemons...
 Note: this project is still in developpement
 
-Running Locally
+#Running Locally
 
 Make sure you have Node.js and mongodb installed.
 Make sure your server databse is running and connect in the app.js file :
