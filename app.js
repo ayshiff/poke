@@ -8,8 +8,10 @@ var upload = multer({
     dest: __dirname + '/uploads'
 });
 
+// Connection à la base de donnée
 mongoose.connect('mongodb://localhost/openclassroom');
 
+// require des modèles
 require('./models/Poke');
 require('./models/Type');
 
@@ -25,6 +27,7 @@ app.use('/types', require('./routes/types'));
 
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
+// configuration du moteur de template
 nunjucks.configure('views', {
     autoescape: true,
     express: app
