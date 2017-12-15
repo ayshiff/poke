@@ -33,6 +33,7 @@ router.get('/edit/:id', function(req, res){
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 router.get('/delete/:id', function(req,res){
     Poke.findOneAndRemove(req.params.id).then(() => {
         res.redirect('/');
@@ -40,6 +41,9 @@ router.get('/delete/:id', function(req,res){
 })
 
 
+=======
+// Route pour accéder au caractéristiques du pokemon demandé
+>>>>>>> 0ce43a9ac510e45fc1cca7cf79eb5d3a5508e6a0
 =======
 // Route pour accéder au caractéristiques du pokemon demandé
 >>>>>>> 0ce43a9ac510e45fc1cca7cf79eb5d3a5508e6a0

@@ -9,8 +9,11 @@ var upload = multer({
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 mongoose.connect('mongodb://localhost/local');
 =======
+=======
+>>>>>>> 0ce43a9ac510e45fc1cca7cf79eb5d3a5508e6a0
 // Connection à la base de donnée
 mongoose.connect('mongodb://localhost/openclassroom');
 >>>>>>> 0ce43a9ac510e45fc1cca7cf79eb5d3a5508e6a0
