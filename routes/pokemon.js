@@ -6,12 +6,14 @@ var Type = require('./../models/Type');
 
 var router = express.Router();
 
+// Route d'acceuil
 router.get('/', function(req, res){
     Poke.find({}).populate('types').then(pokemons => {
         res.render('pokes/index.html', {pokemons: pokemons});
     });
 });
 
+// Route pour ajouter un pokemon
 router.get('/new', function(req, res){
     // récupère toutes les données de la base
     Type.find({}).then(types => {
@@ -20,16 +22,27 @@ router.get('/new', function(req, res){
     })
 });
 
+// Route pour éditer un pokemon
 router.get('/edit/:id', function(req, res){
     Type.find({}).then(types => {
         // Populate nous permet de tranformer un tableau d'object id en tableau avec les types que l'on veut récupérer
        Poke.findById(req.params.id).then(pokemon => {
         res.render('pokes/edit.html', {pokemon: pokemon, types: types, endpoint: '/' + pokemon._id.toString()} )
     }) 
-    })  
+    })
 });
 
+<<<<<<< HEAD
+router.get('/delete/:id', function(req,res){
+    Poke.findOneAndRemove(req.params.id).then(() => {
+        res.redirect('/');
+    })
+})
 
+
+=======
+// Route pour accéder au caractéristiques du pokemon demandé
+>>>>>>> 0ce43a9ac510e45fc1cca7cf79eb5d3a5508e6a0
 router.get('/:id', function(req,res){
     Poke.findById(req.params.id).populate('types').then(function(pokemon){
         res.render('pokes/show.html', {pokemon: pokemon} )

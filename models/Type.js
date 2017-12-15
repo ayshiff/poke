@@ -1,5 +1,6 @@
 var mongoose = require ('mongoose');
 
+// Modèle des types dans la DB
 var typeSchema = new mongoose.Schema({
     name: String,
     color: {

@@ -3,7 +3,11 @@
 
 
 {% block content %}
-<form action="POST" action="{{endpoint}}" enctype="multipart/form-data">
+<<<<<<< HEAD
+<form method="POST" action="{{endpoint}}" enctype="multipart/form-data" >
+=======
+<form method="POST" action="{{endpoint}}" enctype="multipart/form-data">
+>>>>>>> 0ce43a9ac510e45fc1cca7cf79eb5d3a5508e6a0
     <div class="form-group">
         <label for="name">Nom du pokemon</label>
         <input type="text" name="name" id="name" class="form-control" value="{{pokemon.name}}">
@@ -20,6 +24,7 @@
         <label for="file">Image</label>
         <input type="file" name="file" id="file">
     </div>
+    
     <div class="form-group">
         {% for type in types %}
         <label>
@@ -28,7 +33,9 @@
         </label>
         {% endfor %}
     </div>
+    
     <input type="submit" class="btn btn-primary" value="Enregistrer">
+
 </form>
 
 {% endblock %}

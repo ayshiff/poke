@@ -1,5 +1,6 @@
 var mongoose = require ('mongoose');
 
+// Modèle des pokemons dans la DB
 var pokemonSchema = new mongoose.Schema({
     name: String,
     number: Number,

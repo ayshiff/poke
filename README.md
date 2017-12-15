@@ -4,7 +4,7 @@ Note: this project is still in developpement
 # Running Locally
 
 Make sure you have Node.js and mongodb installed.
-Make sure your server databse is running and connect in the app.js file :
+Make sure your server databse is running and connected in the app.js file :
 
   `mongoose.connect('mongodb://localhost/'yourdatabase'');`
 

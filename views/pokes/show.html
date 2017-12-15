@@ -3,9 +3,10 @@
 {% block content %}
     <div class="row">
         <div class="col-sm-3">
-
+            <a href="/edit/{{pokemon._id}}" class="btn btn-primary" > Editer </a>
+            <a href="/delete/{{pokemon._id}}" class="btn btn-primary" > Supprimer  </a>
         </div>
-
+        <img src="/uploads/{{pokemon.picture}}" title="{{pokemon.name}}" style="width: 100%">
         <div class="col-sm-9">
             <h2>{{pokemon.name}} <small>Pokemon numéro {{pokemon.number}} </small></h2>
             <p class="lead">
