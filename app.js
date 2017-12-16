@@ -8,11 +8,16 @@ var upload = multer({
     dest: __dirname + '/uploads'
 });
 
+<<<<<<< HEAD
 
 mongoose.connect('mongodb://localhost/local');
 
 // Connection à la base de donnée
 
+=======
+// Connection à la base de donnée
+mongoose.connect('mongodb://localhost/local');
+>>>>>>> 50f2821a18548561e59f228f8ffbae9d4788ab7c
 
 // require des modèles
 require('./models/Poke');
