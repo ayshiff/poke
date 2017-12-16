@@ -8,15 +8,11 @@ var upload = multer({
     dest: __dirname + '/uploads'
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 mongoose.connect('mongodb://localhost/local');
-=======
-=======
->>>>>>> 0ce43a9ac510e45fc1cca7cf79eb5d3a5508e6a0
+
 // Connection à la base de donnée
-mongoose.connect('mongodb://localhost/openclassroom');
->>>>>>> 0ce43a9ac510e45fc1cca7cf79eb5d3a5508e6a0
+
 
 // require des modèles
 require('./models/Poke');
@@ -30,7 +26,7 @@ app.use(upload.single('file'));
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
 app.use('/', require('./routes/pokemon'));
-app.use('/types', require('./routes/types'));
+app.use('/type', require('./routes/types'));
 
 app.use('/uploads', express.static(__dirname + '/uploads'));
 

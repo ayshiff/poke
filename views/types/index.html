@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h2> Type {{type.name}} </h2>
+    <a href="/new" class="btn btn-primary" style="text-align: center"> Ajouter un pokemon </a>
+    <hr>
+    {% for p in pokemons %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <a href="/{{p._id}}">{{p.name}}</a>
+        </div>
+        <div class="panel-body">
+            {{p.description}}
+        </div>
+    </div>
+    {% endfor %}
+
+{% endblock %}
